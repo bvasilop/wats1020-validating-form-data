@@ -12,11 +12,16 @@ $(document).on( 'ready' , function() {
       submitHandler: function(form) {
             form.submit();
        },
-
-      rules: {
-            'your-name': {
+       rules: {
+        'your-name': {
               required: true,
               maxlength: 128
+       },
+
+       'your-state': {
+              required: true,
+              maxlength: true
+
        },
 
         'your-zip':{
@@ -24,12 +29,21 @@ $(document).on( 'ready' , function() {
               minlength: 5,
               digits: true
       },
+        'card-holder-name': {
+          required: true,
+          maxlength: 128
+      },
         'card-number': {
           required: true,
           creditcard: true
+      },
+        'cvv': {
+            required: true,
+            maxlength: 3,
+            digits: true
         }
-
-    }
-
-  });
+      }
+    });
+  // Tooltips
+  $('label span.glyphicon').tooltip();
 });
