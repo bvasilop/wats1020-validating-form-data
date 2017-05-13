@@ -1,49 +1,85 @@
-/* Custom JS goes here. */
-
-    // For this assignment you'll need to do a few things:
-// 1. Create a document ready handler.
-// 2. Define a validation object for use on your page.
-// 3. Connect the validation object to an event handler tied to the submit button.
-
-// Refer to the `index.html` file for the validation rules that must be enforced.
+// document ready handler
 $(document).on( 'ready' , function() {
-
+  // define object to validate form data
   $('#order-form').validate({
+    //Connect the validation object to an event handler tied to the submit button.
       submitHandler: function(form) {
             form.submit();
        },
+         // validate form data with the following rules
        rules: {
+         //name
         'your-name': {
               required: true,
-              maxlength: 128
+              maxlength: 128,
+              lettersonly: true
        },
+        //address
+       'your-address': {
+              required: true,
+              maxlength:500
 
+       },
+       //additional address
+       'your-address2': {
+              required: false,
+              maxlength: 500
+       },
+        //city
+       'your-city':{
+              required: true
+       },
+        //state
        'your-state': {
               required: true,
-              maxlength: true
+              maxlength: 2
 
        },
-
+        //zip code
         'your-zip':{
               required: true,
               minlength: 5,
+              maxlength: 5,
               digits: true
       },
+        //cardholder name
         'card-holder-name': {
           required: true,
           maxlength: 128
       },
+        //card number
         'card-number': {
           required: true,
           creditcard: true
       },
+
+        //expiration month
+        'expiry-month': {
+          required: true
+      },
+
+        //expiration year
+        'expiry-year': {
+          required: true
+        },
+        //three digit code
         'cvv': {
-            required: true,
-            maxlength: 3,
-            digits: true
+          required: true,
+          maxlength: 3,
+          minlength: 3,
+          digits: true
+        },
+        //shipping
+        'shipping-method':{
+          required: true
+        },
+        //instructions
+        'comments': {
+          required: false,
+          maxlength: 500
         }
       }
     });
-  // Tooltips
-  $('label span.glyphicon').tooltip();
+      // Tooltips
+      $('label span.glyphicon').tooltip();
 });
