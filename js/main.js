@@ -40,7 +40,8 @@ $(document).on( 'ready' , function() {
               required: true,
               minlength: 5,
               maxlength: 5,
-              digits: true
+              digits: true,
+              lettersonly:false
       },
         //cardholder name
         'card-holder-name': {
