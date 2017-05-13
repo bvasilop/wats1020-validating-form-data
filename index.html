@@ -46,19 +46,12 @@
             <div class="col-sm-9">
               <input type="text" class="form-control" name="your-name" id="your-name" placeholder="Your Name" required>
             </div>
-            <!-- TODO: Make validation for name according to these rules:
-                 * Name must be fewer than 128 characters.
-                 * Name may not contain any numbers.
-                 -->
           </div>
           <div class="form-group required">
             <label class="col-sm-3 control-label" for="your-address">Street Address</label>
             <div class="col-sm-9">
               <input type="text" class="form-control" name="your-address" id="your-address" placeholder="Your Street Address" required>
             </div>
-            <!-- TODO: Make validation for street address according to these rules:
-                  * Field must not be blank
-                  -->
           </div>
           <div class="form-group">
             <label class="col-sm-3 control-label" for="your-address2">Street Address (additional)</label>
@@ -107,7 +100,7 @@
             <div class="col-sm-9">
               <div class="row">
                 <div class="col-xs-3">
-                  <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
+                  <select class="form-control col-sm-2" name="expiry-month" id="expiry-month" required>
                     <option>Month</option>
                     <option value="01">Jan (01)</option>
                     <option value="02">Feb (02)</option>
@@ -124,7 +117,7 @@
                   </select>
                 </div>
                 <div class="col-xs-3">
-                  <select class="form-control" name="expiry-year">
+                  <select class="form-control" name="expiry-year" required>
                     <option value="15">2015</option>
                     <option value="16">2016</option>
                     <option value="17">2017</option>
@@ -153,7 +146,7 @@
             <div class="col-sm-9">
               <div class="row">
                 <div class="col-xs-3">
-                  <select class="form-control col-sm-2" name="shipping-method" id="shipping-method"  required>
+                  <select class="form-control col-sm-2" name="shipping-method" id="shipping-method" required>
                     <option>Select One</option>
                     <option value="Ground">Ground</option>
                     <option value="Air">Air</option>

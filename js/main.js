@@ -9,7 +9,7 @@ $(document).on( 'ready' , function() {
          // validate form data with the following rules
        rules: {
          //name
-        'your-name': {
+      'your-name': {
               required: true,
               maxlength: 128,
               lettersonly: true
