@@ -2,11 +2,9 @@
 //create document handler
 $(document).on('ready', function(){
 //alphanumeric validator
-  $.validator.addMethod( "alphanumeric", function( value, element ) {
-	return this.optional( element ) || /^\w+$/i.test( value );
-},
-"Letters, numbers, and underscores only please" );
-
+$.validator.addMethod("alphanumeric", function(value, element) {
+     return this.optional(element) || /^[a-zA-Z0-9]+$/i.test(value);
+}, "Letters, numbers, and underscores only please" );
     // Form validation
     $('#order-form').validate({
         submitHandler: function(form) {
